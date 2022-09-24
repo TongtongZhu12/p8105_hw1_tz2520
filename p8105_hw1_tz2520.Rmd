@@ -5,3 +5,13 @@ date: 2022-09-23
 output: github_document
 ---
 
+```{r loading_packages, message = FALSE}
+library(tidyverse)
+```
+
+# Problem 1
+
+```{r loading_data}
+data("penguins", package = "palmerpenguins")
+```
+
