@@ -25,6 +25,13 @@ The `penguins` dataset has 344 observations of 8 variables. The eight variables 
 
 It contains `r nrow(penguins)` rows and `r ncol(penguins)` columns. The mean flipper length is `r round(mean_flipper_length, digits =2)` mm.
 
+## Scatterplot
+
+```{r scatterplot, warning = FALSE}
+ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point(na.rm = TRUE)
+
+ggsave("scatter_plot.pdf", height = 4, width = 6)
+```
 
 
 
