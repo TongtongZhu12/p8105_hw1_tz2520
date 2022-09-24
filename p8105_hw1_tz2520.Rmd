@@ -63,6 +63,16 @@ The mean of `vec_numeric` variable is `r round (mean_num, digits =2)`.   The mea
 
 **Discussion**: The mean calculation works for numeric variable and logical variable, but does not work for character variable and factor variable.
 
+## Convert variables
+
+```{r convert variables, eval = FALSE}
+as.numeric(pull(new_df, vec_logical))
+as.numeric(pull(new_df, vec_char))
+as.numeric(pull(new_df, vec_factor))
+
+```
+
+**Discussion**: After converting logical, character and factor variables to numeric, only character variable converting result shows NA, the other two show numbers. This help explain the above mean calculation issue. Before converting, the output of numeric variables is numbers, and the logical variable, "True" and "False" will be recognized as "1" and "0". So the mean calculation for them works. But the output of character variables and factor variables is not numeric. So the mean calculation for them does not work. 
 
 
 
