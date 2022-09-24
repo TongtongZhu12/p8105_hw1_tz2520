@@ -49,6 +49,19 @@ new_df = tibble(
 ```
 
 
+## Mean of each variable
+
+```{r mean of variables, warning = FALSE}
+mean_num = mean(pull(new_df, vec_numeric))
+mean_logical = mean(pull(new_df, vec_logical))
+mean_char = mean(pull(new_df, vec_char))
+mean_factor = mean(pull(new_df, vec_factor))
+
+```
+
+The mean of `vec_numeric` variable is `r round (mean_num, digits =2)`.   The mean of `vec_logical`variable is `r round (mean_logical, digits =2)`. The mean of `vec_char` variable is `r round (mean_char, digits =2)`.  The mean of `vec_factor` variable is `r round (mean_factor, digits =2)`.  
+
+**Discussion**: The mean calculation works for numeric variable and logical variable, but does not work for character variable and factor variable.
 
 
 
