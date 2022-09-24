@@ -15,3 +15,19 @@ library(tidyverse)
 data("penguins", package = "palmerpenguins")
 ```
 
+```{r mean of flipper length}
+mean_flipper_length = mean(pull(penguins, flipper_length_mm), na.rm = TRUE)
+```
+
+## Description of dataset
+
+The `penguins` dataset has 344 observations of 8 variables. The eight variables include species, island, bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, sex and year.
+
+It contains `r nrow(penguins)` rows and `r ncol(penguins)` columns. The mean flipper length is `r round(mean_flipper_length, digits =2)` mm.
+
+
+
+
+
+
+
